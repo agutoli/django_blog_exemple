@@ -1,0 +1,31 @@
+{% extends "blog/base.html" %}
+
+{% block titulo %}{% if post.title %} {{ post.title }} {% endif %} | Blog de teste {% endblock %}
+
+{% block content %}
+  {% url home_url_name as home %}
+    {% if post %}
+      <div class="span7">
+        <h6>{{ post.pub_date }}</h6>
+        <h2>{{ post.title }}</h2>
+        {% autoescape off %}
+        <p>{{ post.text}}</p>
+        {% endautoescape %}
+        <hr>
+      </div><!--/span-->
+      <br clear="both">
+    {% endif %}
+{% endblock %}
+
+{% block sidebar %}
+  <li class="nav-header">Category</li>
+    {% if category_list %}
+      {% for categ in category_list %}
+        <li>
+          <a href="/blog/category/{{categ.alias}}">{{ categ.title }}</a>
+        </li>
+      {% endfor %}
+    {% endif %}
+{% endblock %}
+
+

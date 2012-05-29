@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block titulo %}Blog teste{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le styles -->
+    <link href="/static/css/agutoli.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 10px;
+        padding-bottom: 40px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="span10">
+          <div class="hero-unit">
+            <h1><a href="/">Agutoli</a></h1>
+            <p>Este é uma aplicação de teste feita em django</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="span7">
+          <div class="row">
+            {% block content %}
+              <!-- content -->
+            {% endblock %}
+          </div><!--/row-->
+        </div><!--/span-->
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              {% block sidebar %}
+                <!--  sidebar -->
+              {% endblock %}
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+      </div><!--/row-->
+
+
+      <footer>
+        <p>&copy; Company 2012</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/bootstrap-transition.js"></script>
+    <script src="/static/js/bootstrap-alert.js"></script>
+    <script src="/static/js/bootstrap-modal.js"></script>
+    <script src="/static/js/bootstrap-dropdown.js"></script>
+    <script src="/static/js/bootstrap-scrollspy.js"></script>
+    <script src="/static/js/bootstrap-tab.js"></script>
+    <script src="/static/js/bootstrap-tooltip.js"></script>
+    <script src="/static/js/bootstrap-popover.js"></script>
+    <script src="/static/js/bootstrap-button.js"></script>
+    <script src="/static/js/bootstrap-collapse.js"></script>
+    <script src="/static/js/bootstrap-carousel.js"></script>
+    <script src="/static/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>
+</body>
+</html>
