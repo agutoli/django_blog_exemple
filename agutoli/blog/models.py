@@ -1,4 +1,8 @@
 from django.db import models
+from django.contrib.auth import SESSION_KEY, BACKEND_SESSION_KEY, load_backend
+from django.contrib.sessions.models import Session
+from django.contrib.auth.models import User
+
 
 BOOL_CHOICES = ((True, 'Publicado'), (False, 'Nao publicado'))
 

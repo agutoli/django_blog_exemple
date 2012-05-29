@@ -8,7 +8,7 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^blog/?$', 'agutoli.blog.views.index', name='home_url_name'),
     url(r'^blog/(?P<post_id>\d+)','agutoli.blog.views.detail'),
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/?', include(admin.site.urls)),
 
     # url(r'^agutoli/', include('agutoli.foo.urls')),
 
@@ -16,5 +16,5 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     #defaul index
-    url(r'', 'agutoli.views.index'),
+    url(r'', 'agutoli.blog.views.index'),
 )

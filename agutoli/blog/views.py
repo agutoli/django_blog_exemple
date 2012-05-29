@@ -4,7 +4,7 @@ from agutoli.blog.models import Post, Category
 from django.http import HttpResponse
 
 def index(request):
-    posts_list = Post.objects.all()
+    posts_list = Post.objects.filter(published=True)
     category_list = Category.objects.all()
     t = loader.get_template('blog/index.html')
     c = Context({
